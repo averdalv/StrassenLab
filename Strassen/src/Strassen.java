@@ -11,8 +11,7 @@ public class Strassen implements AM{
 		file1 = args[0];
 		file2 = args[1];
 		Const.parseArgs(args);
-		task curtask = new task(new TieRecoveries(
-					  new SafeRun("test"), new EventTrace(), true));
+		task curtask = new task();
 		curtask.addJarFile("Strassen.jar");
 		(new Strassen()).run(new AMInfo(curtask, (channel)null));
 		curtask.end();
